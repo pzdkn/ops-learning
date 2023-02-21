@@ -2,11 +2,11 @@ name: continous_integration
 on:
   push:
     branches:
-      -main
-  jobs:
-    deployments:
-      runs-on: ubuntu-latest
-      steps: 
-        - name: list dir
-          run: >
-            ls -la 
+      - main
+jobs:
+  deployments:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: list dir
+        run: >
+          ls -la 
