@@ -10,3 +10,16 @@ jobs:
       - name: list dir
         run: >
           ls -la 
+      - name: pull and restart
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: |
+            cd /var/www/fastapi_demo
+            git pull origin main
+            systemctl reload fastapi_demo
+            systemctl reload nginx
+
+
