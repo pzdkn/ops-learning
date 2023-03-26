@@ -9,7 +9,7 @@ jobs:
     steps: 
       - name: list dir
         run: >
-          ls -la 
+          ls -l
       - name: pull and restart
         uses: appleboy/ssh-action@v0.1.8
         with:
