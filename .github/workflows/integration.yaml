@@ -20,7 +20,7 @@ jobs:
           script: |
             cd /var/www/fastapi_demo
             git pull origin main
-            systemctl reload fastapi_demo
+            systemctl restart fastapi_demo
             systemctl reload nginx
 
 
